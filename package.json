@@ -4,6 +4,8 @@
   "description": "Hacker Rank is the market-leading technical assessment and remote interview preparation solution for hiring developers. The following is the information collected after research of the website",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --fix main.js",
     "format": "prettier -w ."
@@ -19,7 +21,12 @@
   },
   "homepage": "https://github.com/aneeq-dev/hacker-rank#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.4",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.6.5"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
@@ -27,7 +34,9 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.13",
     "pre-commit": "^1.2.2",
-    "prettier": "^2.4.1"
+    "prettier": "^2.4.1",
+    "sequelize-cli": "^6.2.0"
   }
 }
