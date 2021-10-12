@@ -1,29 +1,18 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable("Kits", {
+    await queryInterface.createTable("Subcomments", {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      name: {
-        type: Sequelize.STRING,
+      commentID: {
+        type: Sequelize.INTEGER,
+        foreignKey: true,
         allowNull: false,
       },
 
-      duration: {
-        type: Sequelize.ENUM("1 week", "1 month", "3 months", ">3 months"),
-        allowNull: false,
-      },
-      difficulty: {
-        type: Sequelize.ENUM("basic", "intermediate", "advanced"),
-        allowNull: false,
-      },
-      attempts: {
-        type: Sequelize.INTEGER,
-        default: 0,
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
@@ -35,6 +24,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable("Kits");
+    await queryInterface.dropTable("Subcomments");
   },
 };

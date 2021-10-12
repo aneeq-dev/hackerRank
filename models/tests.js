@@ -1,5 +1,5 @@
-"use strict";
 const { Model } = require("sequelize");
+
 module.exports = (sequelize, DataTypes) => {
   class Tests extends Model {
     /**
@@ -9,7 +9,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.belongsTo(models.skills);
+      this.belongsTo(models.Skills);
+      this.belongsToMany(models.Challenges, {
+        through: "Test_Challenge_Skill",
+      });
     }
   }
   Tests.init(

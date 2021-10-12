@@ -9,22 +9,22 @@ const _ = require("lodash");
 4- Get contests
 5- Get solutions with respect to contest id
 */
-exports.postContest = function (req, res) {
+exports.postContest = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: postContest");
 };
 
-exports.deleteContest = function (req, res) {
+exports.deleteContest = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: deleteContest");
 };
 
-exports.updateContest = function (req, res) {
+exports.updateContest = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: updateContest");
 };
 
-exports.getContests = function (req, res) {
+exports.getContests = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: getContests");
 };
 
-exports.getSolution = function (req, res) {
+exports.getSolution = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: Get solutions with respect to contest id");
 };

@@ -1,7 +1,7 @@
 const { Model } = require("sequelize");
 
 module.exports = (sequelize, DataTypes) => {
-  class Certificates extends Model {
+  class Contest_Cert_User extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -9,22 +9,18 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.belongsTo(models.Users);
-      this.belongsTo(models.Skills);
     }
   }
-  Certificates.init(
+  Contest_Cert_User.init(
     {
-      name: DataTypes.STRING,
-      description: DataTypes.STRING,
-      allottedTo: DataTypes.INTEGER,
-      type: DataTypes.ENUM("basic", "intermediate", "advanced", "all"),
-      rank: DataTypes.INTEGER,
+      userID: DataTypes.INTEGER,
+      contestID: DataTypes.INTEGER,
+      certificateID: DataTypes.INTEGER,
     },
     {
       sequelize,
-      modelName: "Certificates",
+      modelName: "Contest_Cert_User",
     }
   );
-  return Certificates;
+  return Contest_Cert_User;
 };

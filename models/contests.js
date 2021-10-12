@@ -1,5 +1,5 @@
-"use strict";
 const { Model } = require("sequelize");
+
 module.exports = (sequelize, DataTypes) => {
   class Contests extends Model {
     /**
@@ -9,15 +9,16 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.belongsTo(models.user);
+      this.belongsTo(models.Users);
+      this.belongsToMany(models.Challenges, { through: "Challenge_Contest" });
     }
   }
   Contests.init(
     {
       name: DataTypes.STRING,
       description: DataTypes.STRING,
-      difficulty: DataTypes.ENUM,
-      status: DataTypes.ENUM,
+      difficulty: DataTypes.ENUM("basic", "intermediate", "advanced", "all"),
+      status: DataTypes.ENUM("active", "archived"),
       attempts: DataTypes.INTEGER,
       challengeIDs: DataTypes.ARRAY(DataTypes.INTEGER),
     },

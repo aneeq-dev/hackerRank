@@ -7,6 +7,6 @@ const _ = require("lodash");
 
 */
 
-exports.getLeaderBoard = function (req, res) {
+exports.getLeaderBoard = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: Get the leader-board data w.r.t challenge");
 };

@@ -36,31 +36,31 @@ const _ = require("lodash");
 
 */
 
-exports.getChallengeBySkillID = function (req, res) {
+exports.getChallengeBySkillID = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: getChallengeByID");
 };
 
-exports.postNewChallenge = function (req, res) {
+exports.postNewChallenge = function (req, res, _next) {
   res.send(
     "NOT IMPLEMENTED: Post the new challenges, and also post editorial solution in the same api"
   );
 };
 
-exports.updateChallengeByID = function (req, res) {
+exports.updateChallengeByID = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: Update the existing challenge by id");
 };
 
-exports.deleteChallengeByID = function (req, res) {
+exports.deleteChallengeByID = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: /Delete the challenge based on id");
 };
 
-exports.postChallengeData = function (req, res) {
+exports.postChallengeData = function (req, res, _next) {
   res.send(
     "NOT IMPLEMENTED: Post the challenge data with user id, skill id and kit id "
   );
 };
 
-exports.getChallenegByIDWithSpecificInfo = function (req, res) {
+exports.getChallenegByIDWithSpecificInfo = function (req, res, _next) {
   res.send(
     "NOT IMPLEMENTED: Get the challenge based on id with details including test cases to be passed, attempts and 	name, statement etc."
   );

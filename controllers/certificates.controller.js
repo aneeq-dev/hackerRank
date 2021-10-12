@@ -9,18 +9,18 @@ const _ = require("lodash");
 4- allot certificate to a user with respect to the rank achieved
 5- Get certificates with respect to user id  
 */
-exports.postCertificate = function (req, res) {
+exports.postCertificate = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: Post a certificate/ allot certificate");
 };
 
-exports.deleteCertificate = function (req, res) {
+exports.deleteCertificate = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: delete certificate");
 };
 
-exports.updateCertificate = function (req, res) {
+exports.updateCertificate = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: update certificate");
 };
 
-exports.getCertificates = function (req, res) {
+exports.getCertificates = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: getCertificates");
 };

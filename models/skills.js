@@ -1,5 +1,5 @@
-"use strict";
 const { Model } = require("sequelize");
+
 module.exports = (sequelize, DataTypes) => {
   class Skills extends Model {
     /**
@@ -9,11 +9,18 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.belongsTo(models.kits);
-      this.hasMany(models.tests);
-      this.hasOne(models.certificates);
-      this.hasMany(models.challenges);
-      this.belongsToMany(models.user, { through: "Skill_User" });
+      this.belongsTo(models.Kits, {
+        foreignKey: "kitID",
+      });
+      this.hasMany(models.Tests);
+      this.hasOne(models.Certificates, {
+        foreignKey: "certificationID",
+      });
+      this.hasMany(models.Challenges);
+      this.belongsToMany(models.Users, { through: "Skill_User" });
+      this.belongsToMany(models.Challenges, {
+        through: "Test_Challenge_Skill",
+      });
     }
   }
   Skills.init(
@@ -23,8 +30,7 @@ module.exports = (sequelize, DataTypes) => {
       description: DataTypes.STRING,
       duration: DataTypes.ENUM("1 week", "1 month", "3 months", ">3 months"),
       category: DataTypes.ENUM("basic", "intermediate", "advanced", "all"),
-      challenges: DataTypes.ARRAY(DataTypes.INTEGER),
-      tests: DataTypes.ARRAY(DataTypes.INTEGER),
+
       attempts: DataTypes.INTEGER,
       certificationID: DataTypes.INTEGER,
     },
