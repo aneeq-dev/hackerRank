@@ -10,18 +10,18 @@ const _ = require("lodash");
     10- Get the submitted code with respect to user’s id and challenge id
  */
 
-exports.postSubmission = function (req, res) {
+exports.postSubmission = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: postSubmission");
 };
 
-exports.updateSubmission = function (req, res) {
+exports.updateSubmission = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: updateSubmission");
 };
 
-exports.getSubmissionData = function (req, res) {
+exports.getSubmissionData = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: getSubmissionData");
 };
 
-exports.getSubmittedCode = function (req, res) {
+exports.getSubmittedCode = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: getSubmittedCode");
 };

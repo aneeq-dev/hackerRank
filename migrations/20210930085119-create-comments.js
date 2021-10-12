@@ -1,4 +1,3 @@
-"use strict";
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable("Comments", {
@@ -10,19 +9,24 @@ module.exports = {
       },
       challengeID: {
         type: Sequelize.INTEGER,
+        foreignKey: true,
+        allowNull: false,
       },
       userID: {
         type: Sequelize.INTEGER,
+        foreignKey: true,
+        allowNull: false,
       },
       comment: {
         type: Sequelize.STRING,
+        allowNull: false,
       },
       vote: {
         type: Sequelize.INTEGER,
+        default: 0,
+        allowNull: false,
       },
-      subcomments: {
-        type: Sequelize.ARRAY(Sequelize.INTEGER),
-      },
+
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
@@ -32,6 +36,12 @@ module.exports = {
         type: Sequelize.DATE,
       },
     });
+
+    // await queryInterface.sequelize.query(
+    //   "CREATE TRIGGER voteInit AFTER INSERT on" +
+    //     models.Comments +
+    //     " FOR EACH ROW EXECUTE procedure vote_set()"
+    // );
   },
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable("Comments");

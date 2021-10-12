@@ -1,5 +1,5 @@
-"use strict";
 const { Model } = require("sequelize");
+
 module.exports = (sequelize, DataTypes) => {
   class Certificates extends Model {
     /**
@@ -9,8 +9,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.belongsTo(models.user);
-      this.belongsTo(models.skills);
+      this.belongsTo(models.Users);
+      this.belongsTo(models.Skills);
     }
   }
   Certificates.init(
@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
       name: DataTypes.STRING,
       description: DataTypes.STRING,
       allottedTo: DataTypes.INTEGER,
-      type: DataTypes.ENUM,
+      type: DataTypes.ENUM("basic", "intermediate", "advanced", "all"),
       rank: DataTypes.INTEGER,
     },
     {

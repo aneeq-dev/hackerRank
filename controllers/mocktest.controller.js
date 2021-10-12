@@ -7,10 +7,10 @@ const _ = require("lodash");
     10- Delete mock up test wrt kit id and mock up id
 */
 
-exports.postMockTest = function (req, res) {
+exports.postMockTest = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: postMockTest");
 };
 
-exports.deleteMockTest = function (req, res) {
+exports.deleteMockTest = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: deleteMockTest");
 };

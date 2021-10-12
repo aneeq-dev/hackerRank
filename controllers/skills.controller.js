@@ -13,33 +13,33 @@ const _ = require("lodash");
 	8- Delete skills
  */
 
-exports.getSkillsOnKitID = function (req, res) {
+exports.getSkillsOnKitID = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: getSkillsOnKitID");
 };
 
-exports.getSkills = function (req, res) {
+exports.getSkills = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: getSkills");
 };
 
-exports.getSkillsChallengesOnSkillID = function (req, res) {
+exports.getSkillsChallengesOnSkillID = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: getSkillsChallengesOnSkillID");
 };
 
-exports.getMockupTestsofAKit = function (req, res) {
+exports.getMockupTestsofAKit = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: getMockupTestsofAKit");
 };
 
-exports.getWholeSkillsChallengesAndTests = function (req, res) {
+exports.getWholeSkillsChallengesAndTests = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: getWholeSkillsChallengesAndTests");
 };
 
-exports.postSkill = function (req, res) {
+exports.postSkill = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: postSkill");
 };
-exports.updateSkill = function (req, res) {
+exports.updateSkill = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: updateSkill");
 };
 
-exports.deleteSkill = function (req, res) {
+exports.deleteSkill = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: deleteSkill");
 };

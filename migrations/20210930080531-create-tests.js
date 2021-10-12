@@ -1,4 +1,3 @@
-"use strict";
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable("Tests", {
@@ -8,20 +7,19 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      challenges: {
-        type: Sequelize.ARRAY(Sequelize.INTEGER),
-      },
+
       lastScore: {
         type: Sequelize.INTEGER,
+        default: 0,
       },
-      skillID: {
-        type: Sequelize.INTEGER,
-      },
+
       duration: {
         type: Sequelize.ENUM("1 week", "1 month", "3 months", ">3 months"),
+        allowNull: false,
       },
       attempts: {
         type: Sequelize.INTEGER,
+        default: 0,
       },
       createdAt: {
         allowNull: false,

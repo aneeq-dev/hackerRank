@@ -10,22 +10,22 @@ const _ = require("lodash");
 	15- Get a comment and sub-comments, with respect to comment id
 
 */
-exports.getCommentsByChallengeID = function (req, res) {
+exports.getCommentsByChallengeID = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: getCommentsByChallengeID");
 };
 
-exports.postComment = function (req, res) {
+exports.postComment = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: postComment");
 };
 
-exports.postSubComment = function (req, res) {
+exports.postSubComment = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: postSubComment");
 };
 
-exports.upvoteAComment = function (req, res) {
+exports.upvoteAComment = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: upvoteAComment");
 };
 
-exports.getCommentandSubComments = function (req, res) {
+exports.getCommentandSubComments = function (req, res, _next) {
   res.send("NOT IMPLEMENTED: getCommentandSubComments");
 };

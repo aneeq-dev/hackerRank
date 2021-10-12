@@ -1,5 +1,5 @@
-"use strict";
 const { Model } = require("sequelize");
+
 module.exports = (sequelize, DataTypes) => {
   class Challenges extends Model {
     /**
@@ -10,11 +10,11 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       this.hasOne(models.editorial);
-      this.hasMany(models.submissions);
-      this.hasMany(models.leaderboard);
-      this.hasMany(models.comments);
-      this.belongsTo(models.skills);
-      this.belongsTo(models.contests);
+      this.hasMany(models.Submissions);
+      this.hasMany(models.Leaderboard);
+      this.hasMany(models.Comments);
+      this.belongsTo(models.Skills);
+      this.belongsTo(models.Contests);
     }
   }
   Challenges.init(
